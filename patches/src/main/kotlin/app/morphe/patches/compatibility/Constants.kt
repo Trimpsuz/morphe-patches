@@ -1,10 +1,10 @@
-package app.morphe.patches.busuu
+package app.morphe.patches.compatibility
 
 import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 
 object Constants {
-    val COMPATIBILTIY = Compatibility(
+    val BUSUU = Compatibility(
         name = "Busuu",
         packageName = "com.busuu.android.enc",
         targets = listOf(
@@ -13,6 +13,17 @@ object Constants {
             ),
             AppTarget(
                 version = null,
+            )
+        )
+    )
+
+    val FIRSTY = Compatibility(
+        name = "Firsty",
+        packageName = "com.firsty.app",
+        appIconColor = 0xD7F732,
+        targets = listOf(
+            AppTarget(
+                version = "1.8.23",
             )
         )
     )
